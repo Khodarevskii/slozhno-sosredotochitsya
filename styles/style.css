@@ -42,13 +42,13 @@
 .header__theme-menu {
   color: var(--accent-color);
   display: grid;
-  grid-column: 2;
   margin: 39px 10px 65px 0;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
+  align-items: end;
   gap: 10px;
 }
 
@@ -313,6 +313,7 @@
   .header__theme-menu {
     margin: 18px 0 0;
     justify-content: center;
+    grid-column: 2;
   }
 
   .header__theme-menu-list {
@@ -322,7 +323,7 @@
 
   .header__title {
     grid-column: span 3;
-    margin: 160px 0 0;
+    margin: 290px 0 130px;
   }
 
   .header__subtitle {
