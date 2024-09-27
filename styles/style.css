@@ -11,8 +11,9 @@
   background-repeat: no-repeat;
   padding-bottom: 66px;
   margin-bottom: 40px;
+  height: 100vh;
   display: grid;
-  align-content: center;
+  align-items: start;
 }
 
 .header__decorated-text {
@@ -40,8 +41,8 @@
 
 .header__theme-menu {
   color: var(--accent-color);
-  display: flex;
-  justify-content: end;
+  display: grid;
+  grid-column: 2;
   margin: 39px 10px 65px 0;
 }
 
@@ -105,7 +106,7 @@
   justify-self: end;
 }
 
-.camera-cage::before {
+.decorated-zone::before {
   content: "";
   width: 25px;
   height: 25px;
@@ -116,7 +117,7 @@
   left: 10px;
 }
 
-.camera-cage::after {
+.decorated-zone::after {
   content: "";
   width: 25px;
   height: 25px;
@@ -200,8 +201,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 668px;
   margin-top: 40px;
+  min-height: 100vh;
 }
 
 .footer__title {
@@ -223,12 +224,12 @@
     margin: 146px 20px 173px 0;
   }
 
-  .camera-cage::after {
+  .decorated-zone::after {
     top: 20px;
     right: 20px;
   }
 
-  .camera-cage::before {
+  .decorated-zone::before {
     bottom: 20px;
     left: 20px;
   }
@@ -294,7 +295,6 @@
 
   .footer {
     margin-top: 60px;
-    min-height: 1024px;
   }
 }
 
@@ -322,7 +322,7 @@
 
   .header__title {
     grid-column: span 3;
-    margin: 290px 0 131px;
+    margin: 160px 0 0;
   }
 
   .header__subtitle {
@@ -347,21 +347,19 @@
     min-width: 315px;
   }
 
-  .footer {
-    min-height: 768px;
-  }
 }
 
 @media (prefers-color-scheme: light) {
 
   .page.theme_auto {
-    --bg-color: #fff1f7;
-    --text-color: #353430;
-    --subtitle-bg: #ff8dcb;
-    --bg-image: url(../images/cover-image-light.png);
-    --subtitle-color: currentColor;
-    --main-title-color: #ffc2e6;
-    --accent-color: currentColor;
-    --text-decoration-visbility: hidden;
+  --bg-color: #fff1f7;
+  --text-color: #353430;
+  --subtitle-bg: #ff8dcb;
+  --bg-image: url(../images/cover-image-light.png);
+  --subtitle-color: currentColor;
+  --main-title-color: #ffc2e6;
+  --accent-color: currentColor;
+  --accent-color-opacity: #32312d66;
+  --text-decoration-visbility: hidden;
   }
 }
