@@ -1,5 +1,367 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.header {
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  padding-bottom: 66px;
+  margin-bottom: 40px;
+  display: grid;
+  align-content: center;
+}
+
+.header__decorated-text {
+  display: flex;
+  justify-content: end;
+  visibility: var(--text-decoration-visbility);
+  text-transform: uppercase;
+  gap: 10px;
+  padding: 10px 19px 0 0;
+  align-items: center;
+  color: #ff0070;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.header__decorated-text::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: currentColor;
+  box-shadow: 0 0 4px 2px currentColor;
+}
+
+.header__theme-menu {
+  color: var(--accent-color);
+  display: flex;
+  justify-content: end;
+  margin: 39px 10px 65px 0;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  padding: 4px 13px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-transform: lowercase;
+  background: none;
+  min-width: 70px;
+  border: none;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--accent-color-opacity);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.main-title {
+  color: var(--main-title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  text-shadow: 4px 4px #ff0070;
+}
+
+.header__title {
+  margin: 0 10px 55px;
+}
+
+.subtitle {
+  color: var(--subtitle-color);
+  background-color: var(--subtitle-bg);
+  font-size: 18px;
+  line-height: 23.4px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.header__subtitle {
+  max-width: 355px;
+  white-space: pre-line;
+  margin: 0 10px;
+  justify-self: end;
+}
+
+.camera-cage::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.camera-cage::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.main__content {
+  width: calc(100% - 20px);
+}
+
+.main__content-title {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 23.4px;
+  max-width: 355px;
+}
+
+.main__content-subtitle + .main__content-subtitle {
+  margin-top: 10px;
+}
+
+.main__content-text-card-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__content-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  text-align: left;
+}
+
+.main__content-text-card-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.main__content-link {
+  text-decoration: none;
+  text-shadow: 1px 1px #ff0070;
+}
+
+.main__content-link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.main__content-link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.font-weigth-normal {
+  font-weight: 400;
+}
+
+.main__content-collage {
+  display: grid;
+  gap: 10px;
+}
+
+.main__content-collage-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position:center;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 668px;
+  margin-top: 40px;
+}
+
+.footer__title {
+  text-shadow: 2px 2px #ff0070;
+}
+
+@media (width >= 768px) {
+
+  .header {
+    padding-bottom: 183px;
+    margin-bottom: 60px;
+  }
+
+  .header__decorated-text {
+    padding: 20px 29px 0 0;
+  }
+
+  .header__theme-menu {
+    margin: 146px 20px 173px 0;
+  }
+
+  .camera-cage::after {
+    top: 20px;
+    right: 20px;
+  }
+
+  .camera-cage::before {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .main-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__title {
+    margin: 0 0 165px;
+  }
+
+  .header__subtitle {
+    max-width: 364px;
+    margin: 0 20px;
+  }
+
+  .main {
+    gap: 80px;
+  }
+
+  .main__content {
+    width: calc(100% - 40px);
+  }
+
+  .main__content-wrap {
+    display: flex;
+    gap: 20px;
+  }
+
+  .main__content-title {
+    min-width: 236px;
+    max-width: 236px;
+  }
+
+  .main__content-collage {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .main__content-collage-title {
+    margin-bottom: 20px;
+  }
+
+  .sunset-image {
+    grid-column: 1 / span 2;
+  }
+
+  .ice-cream-image {
+    grid-column: 3/3;
+    grid-row: 1 / span 2;
+  }
+
+  .tape-image {
+    grid-column: 1/2;
+    grid-row: 2 / span 3;
+  }
+
+  .street-image {
+    grid-column: 2/4;
+    grid-row: 3 / span 2;
+  }
+
+  .footer {
+    margin-top: 60px;
+    min-height: 1024px;
+  }
+}
+
+@media (width>=1024px) {
+
+  .header {
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 134px;
+  }
+
+  .header__decorated-text {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .header__theme-menu {
+    margin: 18px 0 0;
+    justify-content: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header__title {
+    grid-column: span 3;
+    margin: 290px 0 131px;
+  }
+
+  .header__subtitle {
+    grid-area: 3/2 / 3 / span 3;
+    max-width: 491px;
+  }
+
+  .main__content-text-card-wrap {
+    display: flex;
+    gap: 20px;
+  }
+
+  .main__content-text-card-item {
+    flex: 1;
+  }
+
+  .main__content-text-card-wrap .main__content-text-card-item {
+    margin: 0;
+  }
+
+  .main__content-title {
+    min-width: 315px;
+  }
+
+  .footer {
+    min-height: 768px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+
+  .page.theme_auto {
+    --bg-color: #fff1f7;
+    --text-color: #353430;
+    --subtitle-bg: #ff8dcb;
+    --bg-image: url(../images/cover-image-light.png);
+    --subtitle-color: currentColor;
+    --main-title-color: #ffc2e6;
+    --accent-color: currentColor;
+    --text-decoration-visbility: hidden;
+  }
 }
