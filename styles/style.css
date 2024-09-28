@@ -1,10 +1,14 @@
 .page {
   background-color: var(--bg-color);
   color: var(--text-color);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; 
 }
 
 .header {
-  background-image: var(--bg-image);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -12,6 +16,7 @@
   padding-bottom: 66px;
   margin-bottom: 40px;
   height: 100vh;
+  min-height: 668px;
   display: grid;
   align-items: start;
 }
@@ -156,11 +161,16 @@
   flex-direction: column;
 }
 
+
 .main__content-text {
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
   text-align: left;
+}
+
+.main__content-text-card-item .main__content-text:not(:last-child){
+  margin-bottom: 10px;
 }
 
 .main__content-text-card-item:not(:last-child) {
@@ -332,12 +342,9 @@
   }
 
   .main__content-text-card-wrap {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 20px;
-  }
-
-  .main__content-text-card-item {
-    flex: 1;
   }
 
   .main__content-text-card-wrap .main__content-text-card-item {
