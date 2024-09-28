@@ -15,3 +15,18 @@
   --accent-color-opacity: #32312d66;
   --text-decoration-visbility: hidden;
 }
+
+@media (prefers-color-scheme: light) {
+
+  .page.theme_auto {
+  --bg-color: #fff1f7;
+  --text-color: #353430;
+  --subtitle-bg: #ff8dcb;
+  --bg-image: url(../images/cover-image-light.png);
+  --subtitle-color: currentColor;
+  --main-title-color: #ffc2e6;
+  --accent-color: currentColor;
+  --accent-color-opacity: #32312d66;
+  --text-decoration-visbility: hidden;
+  }
+}
