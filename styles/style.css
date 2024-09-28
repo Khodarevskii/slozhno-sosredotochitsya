@@ -179,7 +179,7 @@
 
 .main__content-link {
   text-decoration: none;
-  text-shadow: 1px 1px #ff0070;
+  text-shadow: 1px 1px var(--subtitle-bg);
 }
 
 .main__content-link:focus-visible {
@@ -212,7 +212,8 @@
   justify-content: center;
   align-items: center;
   margin-top: 40px;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 668px;
 }
 
 .footer__title {
@@ -224,6 +225,7 @@
   .header {
     padding-bottom: 183px;
     margin-bottom: 60px;
+    min-height: 1024px;
   }
 
   .header__decorated-text {
@@ -313,6 +315,7 @@
   .header {
     grid-template-columns: repeat(3, 1fr);
     padding-bottom: 134px;
+    min-height: 768px;
   }
 
   .header__decorated-text {
